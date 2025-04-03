@@ -1,0 +1,20 @@
+[tool.poetry] # Poetry 패키지 관리 도구를 사용하여 패키지 메타데이터를 정의
+name = "FastAPI-CRUD"
+version = "0.1.0"
+description = "A FastAPI CRUD example" # 패키지 설명
+authors = ["eunhyeok <eunhyeok071023@gmail.com"]
+readme = "README.md"
+license = "MIT" # 패키지 라이센스
+# MIT 라이센스: 소프트웨어 사용자가 소프트웨어를 자유롭게 사용할 수 있도록 허용하는 라이센스
+packages = [{include = "api"}] # 패키지에 포함될 모듈
+
+[tool.poetry.dependencies] # 패키지 의존성 정의
+python = ">=3.12" # 파이썬 3.12 이상
+fastapi = ">=0.115.12,<0.116.0" # FastAPI 0.115.12 이상 0.116.0 미만
+uvicorn = {extras = ["standard"], version = ">=0.34.0,<0.35.0"} # Uvicorn 0.34.0 이상 0.35.0 미만
+
+[build-system] # 빌드 시스템 정의
+requires = ["poetry-core>=2.0.0,<3.0.0"] # Poetry Core 2.0.0 이상 3.0.0 미만
+build-backend = "poetry.core.masonry.api" # Poetry Core의 API를 사용하여 패키지를 빌드
+
+
